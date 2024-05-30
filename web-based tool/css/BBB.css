@@ -1,0 +1,341 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292126;
+    background-color: #ffffff;
+    text-decoration: none;
+    word-spacing: normal;
+    text-align: left;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+/* --XEOKIT--*/
+
+#my-CubeCanvas {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 200000;
+}
+
+#my-Canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(206, 67, 67);
+    background-image: linear-gradient(white, gray);
+}
+
+.xeokit-camera-pivot-marker {
+    color: #ffffff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    border: 2px solid #ebebeb;
+    background: #4444;
+    visibility: hidden;
+    box-shadow: 5px 5px 15px 1px #212529;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+
+
+
+
+/* UPPER MENU */
+
+
+.upper_menu {
+    background-color: rgb(255, 255, 255);
+    display: flexbox;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    border-bottom: 2px solid rgb(45, 140, 85);
+
+}
+
+nav {
+    float: left;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 50px;
+    padding-top: 20px;
+
+    position: relative;
+}
+
+
+nav a {
+    color: rgb(45, 140, 85);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: rgb(140, 45, 53);
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: rgb(140, 45, 53);
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+
+
+
+/* LEFT MENU WITH OPTIONS */
+.section_left {
+    background-color: #fff;
+    width: 300px;
+    float: left;
+    height: 100vh;
+    border-right: 2px solid rgb(45, 140, 85);
+    box-sizing: border-box;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.map {
+    text-align: center;
+}
+
+/* --NAVIGATION AND INPUT BUTTONS--*/
+
+
+input,
+button {
+    outline: #1e1e1e;
+    text-align: center;
+    /*justify-content: left;
+    width: 240px; */
+}
+
+th {
+    font-weight: 400;
+    text-align: right;
+    align-items: right;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------*/
+/* ViewTable on datasent.php from SQL */
+
+
+.tablesql {
+    background: rgb(219, 240, 209);
+    width: 100%;
+    height: 88vh;
+    overflow-y: scroll;
+    
+    display: block;
+}
+
+
+#bldobjects {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    border-collapse: collapse;
+    
+  }
+  
+  #bldobjects td, #bldobjects th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width:14.28vw;
+  }
+  
+  
+  
+  #bldobjects tr:hover {background-color: #ddd;}
+  
+
+
+
+/* ----------------------------------------------------------------------------------------------------------*/
+/* TreeViewPlugin */
+/* ----------------------------------------------------------------------------------------------------------*/
+
+#treeViewContainer {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    background-color: rgba(141, 199, 155, 0.356);
+    color: black;
+    top: 20px;
+    z-index: 200000;
+    float: right;
+    left: 0;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    width: 300px;
+}
+
+#treeViewContainer ul {
+    list-style: none;
+    padding-left: 1.75em;
+    pointer-events: none;
+}
+
+#treeViewContainer ul li {
+    position: relative;
+    width: 500px;
+    pointer-events: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+
+#treeViewContainer ul li a {
+    background-color: #eee;
+    border-radius: 50%;
+    color: #000;
+    display: inline-block;
+    height: 1.5em;
+    left: -1.5em;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 1.5em;
+    pointer-events: all;
+}
+
+#treeViewContainer ul li a.plus {
+    background-color: #ded;
+    pointer-events: all;
+}
+
+#treeViewContainer ul li a.minus {
+    background-color: #eee;
+    pointer-events: all;
+}
+
+#treeViewContainer ul li a:active {
+    top: 1px;
+    pointer-events: all;
+}
+
+#treeViewContainer ul li span:hover {
+    color: white;
+    cursor: pointer;
+    background: black;
+    padding-left: 2px;
+    pointer-events: all;
+}
+
+#treeViewContainer ul li span {
+    display: inline-block;
+    width: calc(100% - 50px);
+    padding-left: 2px;
+    pointer-events: all;
+    height: 23px;
+}
+
+#treeViewContainer .highlighted-node {
+    /* Appearance of node highlighted with TreeViewPlugin#showNode() */
+    border: black solid 1px;
+    background: yellow;
+    color: black;
+    padding-left: 1px;
+    padding-right: 5px;
+    pointer-events: all;
+}
+
+
+
+/*  POP UP GOOGLE MAP*/
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 550px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Sign-up form */
+.signup-form {
+    text-align: center;
+}
